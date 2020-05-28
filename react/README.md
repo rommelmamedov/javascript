@@ -17,6 +17,7 @@ This style guide is mostly based on the standards that are currently prevalent i
 22. Methods
 24. Ordering
 26. `isMounted`
+27. Project Folder Sturcture
 
 ## Basic Rules
 
@@ -685,3 +686,102 @@ render() {
 - Do not use `isMounted`. eslint: `[react/no-is-mounted](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md)`
 
 > Why? isMounted is an anti-pattern, is not available when using ES6 classes, and is on its way to being officially deprecated.
+
+## Folder Structures 📂
+
+```
+|── public
+│   ├── css
+│   ├── favicons
+│   ├── icons
+│   ├── img
+│   │   ├── icons
+│   │   └── mocks
+│   ├── browserconfig.xml
+│   ├── index.html
+│   ├── manifest.json
+│   ├── manifest.webapp
+│   ├── robots.txt
+│   └── worker.js
+├── src
+│   ├── components
+│   │   ├── Component
+│   │   │   |── _style.scss
+│   │   │   └── index.js
+│   ├── db
+│   │   └── mock.js
+│   ├── layout
+│   │   ├── _style.scss
+│   │   ├── index.js
+│   │   ├── reducer.js
+│   │   ├── saga.js
+│   │   └── view.js
+│   ├── pages
+│   │   ├── page
+│   │   │   ├── _style.scss
+│   │   │   ├── index.js
+│   │   │   ├── reducer.js
+│   │   │   ├── saga.js
+│   │   │   └── view.js
+│   ├── widgets
+│   │   ├── Widget
+│   │   │   ├── _style.scss
+│   │   │   ├── index.js
+│   │   │   ├── reducer.js
+│   │   │   ├── saga.js
+│   │   │   └── view.js
+│   ├── redux
+│   │   ├── reducers.js
+│   │   ├── sagas.js
+│   │   └── store.js
+│   ├── routes
+│   │   └── index.js
+│   ├── styles
+│   │   ├── global.scss
+│   │   ├── icons.scss
+│   │   ├── index.scss
+│   │   ├── mixins.scss
+│   │   ├── reset.scss
+│   │   └── vars.scss
+│   ├── tests
+│   │   ├── config.actions.test.js
+│   │   └── reducers.test.js
+│   ├── utils
+│   │   ├── config.actions.js
+│   │   ├── config.axios.js
+│   │   ├── config.context.js
+│   │   ├── config.firebase.js
+│   │   ├── config.handlers.js
+│   │   ├── config.helpers.js
+│   │   ├── config.saga.js
+│   │   ├── config.sw.js
+│   │   └── config.ui.js
+│   └── widgets
+│   │   ├── config.actions.js
+│   │   ├── config.axios.js
+│   │   ├── config.handlers.js
+│   │   ├── config.localization.js
+│   │   ├── config.saga-crud.js
+│   │   ├── config.context.js
+│   │   ├── config.saga.js
+│   │   └── config.ui.js
+│   └── index.js
+├── .babelrc
+├── .codeclimate.yml
+├── .dockerignore
+├── .editorconfig
+├── .eslintrc
+├── .gitignore
+├── .gitlab-ci.yml
+├── .prettierignore
+├── .prettierrc
+├── config-overrides.js
+├── Dockerfile
+├── jsconfig.json
+├── package-lock.json
+├── package.json
+├── README.md
+├── server.js
+├── STYLEGUIDE.md
+└── TODO.md
+```
